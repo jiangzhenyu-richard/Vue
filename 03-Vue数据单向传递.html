@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue数据单向传递</title>
+    <script src="JS/vue.js"></script>
+</head>
+<body>
+    <!--
+        1、MVVM设计模式
+        M：model  数据模型（保存数据，处理业务逻辑）
+        V: view   视图 （展示数据，和用户交互）
+        VM： view model 数据模型和视图的桥梁（M是中国人 V是美国人，VM就是翻译）
+        MVVM设计模式最大特点就是支持数据的双向传递
+        model传递给view，view也可以传递给model，通过VM（view model 传递）
+       {传递模式
+       M -> VM ->V
+       V -> VM ->M
+       }
+
+        2、Vue中的MVVM的划分
+        被控制的区域：view
+        Vue实例对象： view model
+        实例对象中data ：Model
+
+        3、Vue中的单向传递
+        把数据交给Vue实例对象，Vue实例对象把数据交给 被控制的区域（view 又称界面）
+          model -> view model                      -> view
+    -->
+<!--这里就是view-->
+    <div id="app">
+        <p>{{name}} of course</p>
+        <span>{{haha}} of </span>
+    </div>
+</body>
+<script>
+    //这是 MVVM中的 view model
+    let vue = new Vue({
+        el:'#app',
+        //这是 model
+        data:{
+            name:"当然",
+        }
+    });
+
+</script>
+</html>
