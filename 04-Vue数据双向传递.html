@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="JS/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>{{name}}</p>
+        <!--双向传递 参考Vue官网-->
+        <input type="text" v-model="msg">
+    </div>
+</body>
+<script>
+    //这是 MVVM中的 view model
+    let vue = new Vue({
+        el:'#app',
+        //这是 model
+        data:{
+            name:"李南江老师",
+            msg:"知播渔平台"
+        }
+    });
+
+</script>
+</html>
