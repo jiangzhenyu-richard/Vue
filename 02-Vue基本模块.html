@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--1、导入vue.js文件-->
+    <script src="JS/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>{{name}} of course</p>
+        <span>{{haha}} of </span>
+    </div>
+
+    <div id="ap">
+        <p>{{en}}</p>
+        <span>{{haz}} saijdicz</span>
+    </div>
+</body>
+<script>
+    //2、创建一个Vue实例对象
+    let vue = new Vue({
+        //3、告诉Vue的实例对象，将来需要控制界面上的那个区域
+        el:'#app',
+        //4、告诉Vue的实例对象，被控制区域的数据是什么
+        data:{
+            name:"当然",
+            haha:'Juede',
+        }
+    });
+
+
+    let va = new Vue({
+        el:'#ap',
+        data: {
+            en:"hehe纷乱",
+            haz:'asdcv萨达',
+        }
+    });
+</script>
+
+</html>
