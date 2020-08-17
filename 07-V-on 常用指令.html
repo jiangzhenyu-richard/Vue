@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--1、导入vue.js文件-->
+    <script src="JS/vue.js"></script>
+</head>
+<body>
+
+<!--1、 v-on指令是什么
+    是给元素绑定监听事件
+
+
+-->
+
+    <div id="app">
+        <!-- JS监听事件 -->
+        <button onclick="alert('haha')">我是按钮</button>
+        <p>-------分-----割------线-------</p>
+        <!-- v-on监听事件  注意点：
+         1、如果是通过v-on来绑定监听事件,那么在指定事件名称的时候不需要写on
+         2、如果是通过v-on来绑定监听事件,那么在赋值的时候必须赋值一个回调函数的名称
+         -->
+        <button v-on:click="Fn">我是按钮2</button>
+        <p>-------分-----割------线-------</p>
+        <!-- v-on简写方式如下 -->
+        <button @click="Fn">我是按钮3</button>
+    </div>
+</body>
+<script>
+    //2、创建一个Vue实例对象
+    let vue = new Vue({
+        //3、告诉Vue的实例对象，将来需要控制界面上的那个区域
+        el:'#app',
+        //4、告诉Vue的实例对象，被控制区域的数据是什么
+        data:{
+
+        },
+        //methods: 函数方法
+        methods:{
+            Fn(){   //自定义函数名称
+                alert("哈哈hhe")
+            }
+        }
+    });
+</script>
+
+</html>
