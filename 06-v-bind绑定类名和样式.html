@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--1、导入vue.js文件-->
+    <script src="JS/vue.js"></script>
+</head>
+<style>
+    .color{
+        background-color: cyan;
+    }
+    .size{
+        font-size: 100px;
+    }
+
+</style>
+<body>
+<div id="app">
+    <!-- v-bind绑定类名 -->
+    <p :class="obj">练习Bind</p>
+    <p>------------------分----割---线--------------------------</p>
+
+
+    <!-- v-bind绑定样式 -->
+    <p :style="[obj1,obj2]">v-bind绑定样式练习</p>
+
+
+
+</div>
+</body>
+<script>
+    //2、创建一个Vue实例对象
+    let vue = new Vue({
+        //3、告诉Vue的实例对象，将来需要控制界面上的那个区域
+        el:'#app',
+        //4、告诉Vue的实例对象，被控制区域的数据是什么
+        data:{
+            obj:{
+                color:true,
+                size:true,
+
+            },
+            obj1:{
+                "color":"red",
+                "font-size":"25px",
+                "text-align":" center",
+            },
+            obj2:{
+                "background":"blue",
+            }
+        }
+    });
+</script>
+
+</html>
